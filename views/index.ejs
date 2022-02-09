@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload with node js</title>
+</head>
+
+<body>
+    <section className="container mx-auto">
+        <%= typeof msg !="undefined" ? msg : "" %>
+
+            <!-- form start-->
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div className="">
+                    <div>
+                        <label className="text-green">File Upload</label>
+                        <input className="" name="myImage" type="file">
+                    </div>
+                </div>
+
+                <div className="">
+                    <button className="">Submit</button>
+                </div>
+            </form>
+            <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+
+            <!-- form end-->
+    </section>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#7ed6df',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
